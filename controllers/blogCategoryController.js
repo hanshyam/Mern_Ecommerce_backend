@@ -54,7 +54,7 @@ const getaCategory = asyncHandler(async (req, res) => {
 const getAllCategory = asyncHandler(async (req, res) => {
   try {
     const categories = await blogCategoryModel.find();
-    res.json({ categories });
+    res.json(categories);
   } catch (error) {
     throw new Error(error);
   }

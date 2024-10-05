@@ -45,7 +45,7 @@ const getaBrand = asyncHandler (async (req,res)=>{
     validateMongoDbId(id);
     try {
         const brand = await brandModel.findById(id);
-        res.json({brand});
+        res.json(brand);
     } catch (error) {
         throw new Error(error);
     }
@@ -55,7 +55,7 @@ const getaBrand = asyncHandler (async (req,res)=>{
 const getAllBrand = asyncHandler (async (req,res)=>{
     try {
         const brands = await brandModel.find();
-        res.json({brands});
+        res.json(brands);
     } catch (error) {
         throw new Error(error);
     }

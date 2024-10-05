@@ -59,7 +59,7 @@ const getaBlog = asyncHandler(async (req, res) => {
 const getAllBlogs = asyncHandler( async (req,res)=>{
     try {
          const blogs = await blogModel.find();
-         res.json({blogs});
+         res.json(blogs);
     } catch (error) {
         throw new Error(error);
     }

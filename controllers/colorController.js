@@ -53,8 +53,8 @@ const getaColor = asyncHandler(async (req, res) => {
 // geting all the Color
 const getAllColor = asyncHandler(async (req, res) => {
   try {
-    const Colors = await colorModel.find();
-    res.json({ Colors });
+    const colors = await colorModel.find();
+    res.json(colors);
   } catch (error) {
     throw new Error(error);
   }

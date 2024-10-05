@@ -55,7 +55,7 @@ const getaCategory = asyncHandler (async (req,res)=>{
 const getAllCategory = asyncHandler (async (req,res)=>{
     try {
         const categories = await productCategoryModel.find();
-        res.json({categories});
+        res.json(categories);
     } catch (error) {
         throw new Error(error);
     }

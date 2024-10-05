@@ -53,8 +53,8 @@ const getaEnquiry = asyncHandler(async (req, res) => {
 // geting all the Enquiry
 const getAllEnquiry = asyncHandler(async (req, res) => {
   try {
-    const Enquirys = await enqModel.find();
-    res.json({ Enquirys });
+    const Enquiries = await enqModel.find();
+    res.json(Enquiries);
   } catch (error) {
     throw new Error(error);
   }

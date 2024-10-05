@@ -15,6 +15,7 @@ import errorHandler from './middleware/errorHandler.js';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
+import cors from 'cors';
 
 // import corps from 'corps';
 
@@ -23,6 +24,7 @@ const app = express();
 connectDB();
 const port = process.env.PORT||4000;
 
+app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(bodyParser.json());
